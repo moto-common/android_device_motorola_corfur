@@ -5,12 +5,12 @@ LOCAL_IS_RUNTIME_RESOURCE_OVERLAY := true
 
 LOCAL_CERTIFICATE := platform
 
-LOCAL_PACKAGE_NAME := milanfSystemUIOverlay
+LOCAL_PACKAGE_NAME := corfuqSystemUIOverlay
 
 LOCAL_RESOURCE_DIR := \
     $(LOCAL_PATH)/res
 
-LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay/milanfSystemUIOverlay
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/overlay/corfuqSystemUIOverlay
 
 LOCAL_PRIVATE_PLATFORM_APIS := true
 

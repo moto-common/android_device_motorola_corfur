@@ -13,12 +13,12 @@
 # limitations under the License.
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/motorola/milanf/device.mk)
+$(call inherit-product, device/motorola/corfuq/device.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-PRODUCT_NAME := aosp_milanf
-PRODUCT_DEVICE := milanf
-PRODUCT_MODEL := Moto G Stylus 5G (AOSP)
+PRODUCT_NAME := aosp_corfuq
+PRODUCT_DEVICE := corfuq
+PRODUCT_MODEL := Moto G62 (AOSP)
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola

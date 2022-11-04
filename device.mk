@@ -15,20 +15,25 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 # Device path
-DEVICE_PATH := device/motorola/milanf/rootdir
+DEVICE_PATH := device/motorola/corfuq/rootdir
 
 DEVICE_PACKAGE_OVERLAYS += \
-    device/motorola/milanf/overlay
+    device/motorola/corfuq/overlay
 
 # Kernel
 PRODUCT_COPY_FILES += \
-    device/motorola/milanf-kernel/Image:kernel
+    device/motorola/corfuq-kernel/Image:kernel
 
 # Audio Configuration
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/vendor/etc/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
     $(DEVICE_PATH)/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(DEVICE_PATH)/vendor/etc/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
+
+# Device Init
+PRODUCT_PACKAGES += \
+    fstab.corfuq \
+    vendor-fstab.corfuq
 
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
@@ -39,11 +44,15 @@ PRODUCT_PROPERTY_OVERRIDES := \
 
 # Overlay
 PRODUCT_PACKAGES += \
-    milanfFrameworkOverlay \
-    milanfSystemUIOverlay
+    corfuqFrameworkOverlay \
+    corfuqSystemUIOverlay
+
+# Fingerprint
+TARGET_USES_GOODIX_FINGERPRINT := true
+TARGET_USES_FPC_FINGERPRINT := true
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/sm4350-common/platform.mk)
 
 # include board vendor blobs
-$(call inherit-product-if-exists, vendor/motorola/milanf/milanf-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/corfuq/corfuq-vendor.mk)
