@@ -15,14 +15,14 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
 # Device path
-DEVICE_PATH := device/motorola/corfuq/rootdir
+DEVICE_PATH := device/motorola/corfur/rootdir
 
 DEVICE_PACKAGE_OVERLAYS += \
-    device/motorola/corfuq/overlay
+    device/motorola/corfur/overlay
 
 # Kernel
 PRODUCT_COPY_FILES += \
-    device/motorola/corfuq-kernel/Image:kernel
+    device/motorola/corfur-kernel/Image:kernel
 
 # Audio Configuration
 PRODUCT_COPY_FILES += \
@@ -32,8 +32,8 @@ PRODUCT_COPY_FILES += \
 
 # Device Init
 PRODUCT_PACKAGES += \
-    fstab.corfuq \
-    vendor-fstab.corfuq
+    fstab.corfur \
+    vendor-fstab.corfur
 
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
@@ -55,4 +55,4 @@ TARGET_USES_FPC_FINGERPRINT := true
 $(call inherit-product, device/motorola/sm4350-common/platform.mk)
 
 # include board vendor blobs
-$(call inherit-product-if-exists, vendor/motorola/corfuq/corfuq-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/corfur/corfur-vendor.mk)

@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=corfuq
+DEVICE=corfur
 VENDOR=motorola
 
 # Load extract utilities and do some sanity checks.

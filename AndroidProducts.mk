@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/aosp_corfuq.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/aosp_corfur.mk
 
 COMMON_LUNCH_CHOICES += \
-    aosp_corfuq-eng \
-    aosp_corfuq-userdebug
+    aosp_corfur-eng \
+    aosp_corfur-userdebug
