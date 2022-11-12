@@ -17,6 +17,8 @@ include device/motorola/sm4350-common/PlatformConfig.mk
 # Platform
 PRODUCT_PLATFORM := holi
 
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # Partition information
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824 # (0x1800000)
