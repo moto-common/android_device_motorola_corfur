@@ -15,8 +15,10 @@
 # Device path
 DEVICE_PATH := device/motorola/corfur/rootdir
 
-DEVICE_PACKAGE_OVERLAYS += \
-    device/motorola/corfur/overlay
+# Device Specific Permissions
+PRODUCT_COPY_FILES := \
+    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml
 
 # Kernel
 PRODUCT_COPY_FILES += \
@@ -39,11 +41,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=420
-
-# Overlay
-PRODUCT_PACKAGES += \
-    corfuqFrameworkOverlay \
-    corfuqSystemUIOverlay
 
 # Fingerprint
 TARGET_USES_GOODIX_FINGERPRINT := true
