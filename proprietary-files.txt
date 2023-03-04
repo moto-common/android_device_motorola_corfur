@@ -143,6 +143,7 @@ vendor/lib/libjpege.so
 vendor/lib/libofflinelog.so
 vendor/lib/libopencv.so
 vendor/lib/libopestriping.so
+vendor/lib/libremosaic_wrapper.so
 vendor/lib/libsns_device_mode_stub.so
 vendor/lib/libsns_fastRPC_util.so
 vendor/lib/libsns_low_lat_stream_stub.so
@@ -283,6 +284,7 @@ vendor/lib64/libofflinedump.so
 vendor/lib64/libofflinelog.so
 vendor/lib64/libopencv.so
 vendor/lib64/libopestriping.so
+vendor/lib64/libremosaic_wrapper.so
 vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsns_low_lat_stream_stub.so
@@ -448,20 +450,3 @@ vendor/etc/sensors/sns_reg_config
 
 # Thermal
 vendor/etc/thermal-engine-corfur.conf
-
-# Missing
-vendor/lib/librmnetctl.so
-vendor/lib64/librmnetctl.so
-vendor/lib/libjson.so
-vendor/lib64/libjson.so
-vendor/lib/libqti_vndfwk_detect.so
-vendor/lib64/libqti_vndfwk_detect.so
-vendor/lib/com.dsi.ant@1.0.so
-vendor/lib64/com.dsi.ant@1.0.so
-vendor/lib/libremosaic_wrapper.so
-vendor/lib64/libremosaic_wrapper.so
-vendor/lib/libqti-perfd-client.so
-vendor/lib64/libqti-perfd-client.so
-#vendor/lib/vendor.qti.hardware.perf@2.2.so
-#vendor/lib64/vendor.qti.hardware.perf@2.2.so
-vendor/lib/hw/sound_trigger.primary.holi.so
