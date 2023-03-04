@@ -28,8 +28,8 @@ PRODUCT_COPY_FILES += \
 
 # Device Init
 PRODUCT_PACKAGES += \
-    fstab.corfur \
-    vendor-fstab.corfur
+    fstab.qcom.vendor_ramdisk \
+    fstab.qcom
 
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
