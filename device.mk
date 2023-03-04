@@ -15,10 +15,13 @@
 # Device path
 DEVICE_PATH := device/motorola/corfur/rootdir
 
-# Device Specific Permissions
-PRODUCT_COPY_FILES := \
-    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.sf.lcd_density=420
 
 # Audio Configuration
 PRODUCT_COPY_FILES += \
@@ -30,13 +33,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.qcom.vendor_ramdisk \
     fstab.qcom
-
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-PRODUCT_PROPERTY_OVERRIDES := \
-    ro.sf.lcd_density=420
 
 # Fingerprint
 TARGET_USES_GOODIX_FINGERPRINT := true

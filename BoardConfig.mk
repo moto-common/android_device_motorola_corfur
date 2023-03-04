@@ -12,21 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include device/motorola/sm4350-common/PlatformConfig.mk
-
 # Platform
 PRODUCT_PLATFORM := holi
+include device/motorola/sm4350-common/PlatformConfig.mk
 
-SELINUX_IGNORE_NEVERALLOWS := true
+# Bootloader Name
+TARGET_BOOTLOADER_BOARD_NAME := corfur
 
 # Partition information
-BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
-BOARD_DTBOIMG_PARTITION_SIZE := 25165824 # (0x1800000)
-
 BOARD_SUPER_PARTITION_SIZE := 14512291840
 BOARD_SUPER_PARTITION_GROUPS := mot_dynamic_partitions
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := $(BOARD_BOOTIMAGE_PARTITION_SIZE)
 
+# DYNAMIC_PARTITIONS_SIZE = (SUPER_PARTITION_SIZE / 2) - 4MB
 BOARD_MOT_DYNAMIC_PARTITIONS_SIZE := 6442446848
 BOARD_MOT_DYNAMIC_PARTITIONS_PARTITION_LIST := \
     system_ext \
