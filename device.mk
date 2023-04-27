@@ -38,6 +38,10 @@ PRODUCT_PACKAGES += \
 TARGET_USES_GOODIX_FINGERPRINT := true
 TARGET_USES_FPC_FINGERPRINT := true
 
+# Media
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/vendor/etc/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml
+
 # NFC
 TARGET_USES_ST_NFC := true
 
